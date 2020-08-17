@@ -5,7 +5,7 @@ import 'package:firebasecrud/screen/register_view.dart';
 import 'package:firebasecrud/screen/login.dart';
 import 'package:firebasecrud/screen/kampus_screen.dart';
 import 'package:firebasecrud/drawer/Maps.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebasecrud/screen/profile.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class OwnDrawer extends StatelessWidget {
@@ -95,6 +95,22 @@ class OwnDrawer extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => Maps()),
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  leading: Icon(Icons.account_box),
+                  title: Text(
+                    "Profile",
+                    style: TextStyle(fontSize: 20, fontFamily: 'DancingScript'),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Profile()),
                     );
                   },
                 ),
